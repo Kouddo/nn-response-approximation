@@ -1,0 +1,21 @@
+AutoEncoder(
+  (encoder): Sequential(
+    (0): Linear(in_features=1728, out_features=800, bias=True)
+    (1): LayerNorm((800,), eps=1e-05, elementwise_affine=True)
+    (2): ReLU()
+    (3): Dropout(p=0.3, inplace=False)
+    (4): Linear(in_features=800, out_features=450, bias=True)
+    (5): ReLU()
+    (6): Linear(in_features=450, out_features=250, bias=True)
+    (7): ReLU()
+  )
+  (decoder): Sequential(
+    (0): Linear(in_features=250, out_features=450, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=450, out_features=800, bias=True)
+    (3): ReLU()
+    (4): Linear(in_features=800, out_features=1728, bias=True)
+    (5): ReLU()
+  )
+)
+Number of parameters for autoencoder: 3715878
